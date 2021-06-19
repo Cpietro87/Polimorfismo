@@ -13,7 +13,7 @@ const bd = [
     }
 ]
 
-function buscarPorId(idauto: number){
+function buscarPorId(idauto: number): Promise<any>{
 
     return new Promise (function(resolver, rechazar): void{
 
@@ -47,7 +47,7 @@ function buscarPorId(idauto: number){
      try {
          let res = await buscarPorId(2);
          console.info(`-- Su auto es ${res.marca}`);
-         let res = await buscarPorId(2);
+         res = await buscarPorId(2);
          console.info(`-- Su auto es ${res.marca}`);
          console.info("Fin de la app");
      } catch (error) {
